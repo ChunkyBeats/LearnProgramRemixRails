@@ -19,7 +19,11 @@ class LessonsController < ApplicationController
   end
 
   def show
+    lessons = Lesson.all
     @lesson = Lesson.find(params[:id])
+    @nextLesson = lessons.find_by(number: @lesson.number+1)
+    @previousLesson = lessons.find_by(number: @lesson.number-1)
+
   end
 
   def destroy

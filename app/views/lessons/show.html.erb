@@ -7,5 +7,7 @@
 <%= link_to "Get it gone boy!", lesson_path(@lesson),
               :data => {:confirm => "We doing it?!",
               :method => "delete"} %><br><br>
-<%= link_to "Change up this piece", edit_lesson_path(@lesson) %>
+<%= link_to "Change up this piece", edit_lesson_path(@lesson) %> |
+<%= link_to "Next Lesson", lesson_path(@nextLesson) %> |
+<%= link_to "Previous Lesson", lesson_path(@previousLesson) %> |
 <%= link_to "Return to Lessons", lessons_path %>
