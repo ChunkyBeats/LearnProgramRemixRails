@@ -1,0 +1,11 @@
+<h1><%= @lesson.name %></h1>
+
+<h3>CODED IN: <%= @lesson.language %></h3>
+
+<p><%= @lesson.content %></p>
+
+<%= link_to "Get it gone boy!", lesson_path(@lesson),
+              :data => {:confirm => "We doing it?!",
+              :method => "delete"} %><br><br>
+<%= link_to "Change up this piece", edit_lesson_path(@lesson) %>
+<%= link_to "Return to Lessons", lessons_path %>

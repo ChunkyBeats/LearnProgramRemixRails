@@ -1,0 +1,11 @@
+<h1>Learn Programming Slowly</h1>
+
+<ul>
+  <% @lessons.each do |lesson| %>
+    <li><%= link_to lesson.name, lesson_path(lesson) %><br>
+       <%= lesson.language %> | <%= lesson.content %> | 
+       <br><%= lesson.number %></li>
+  <% end %>
+</ul>
+
+<%= link_to "New Lesson", new_lesson_path %>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LearnProgram</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header class="navbar navbar-inverse">
+  <div class="navbar-class">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Previous Lesson</a></li>
+        <li><a href="#">Next Lesson</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li><a href="/lessons">Home</a></li>
+        <li><a href="/lessons/new">Add a Lesson BRUH</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+
+<%= flash[:alert] %>
+<%= flash[:notice] %>
+
+<%= yield %>
+
+
+
+</body>
+</html>

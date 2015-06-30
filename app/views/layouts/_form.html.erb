@@ -1,0 +1,13 @@
+
+
+<%= form_for @lesson do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :language %>
+  <%= f.text_field :language %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.label :number %>
+  <%= f.number_field :number %>
+  <%= f.submit %>
+<% end %>
